@@ -1,10 +1,10 @@
-# Java IOs examples
+# HEIG-VD DAI Course - Code examples
 
-This repository contains examples of Java IOs. You'll learn how to read and write binary and text files, how to use buffers and manage encoding.
+This repository contains the code examples related to the [main repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course).
 
 We recommend you to try each example and understand how it works.
 
-# Usage
+## Usage
 
 To run the examples, you can use the following command:
 
