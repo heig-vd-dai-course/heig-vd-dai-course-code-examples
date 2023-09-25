@@ -1,0 +1,27 @@
+## Java
+
+*.class
+
+## Java IOs
+
+# Outputs
+*.bin
+*.txt
+
+## Linux
+
+# Temporary files
+*~
+
+## macOS
+
+# Files created by macOS Finder
+.DS_Store
+
+## Windows
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# Folder config file
+[Dd]esktop.ini
