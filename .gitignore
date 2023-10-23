@@ -1,13 +1,3 @@
-## Java
-
-*.class
-
-## Java IOs
-
-# Outputs
-*.bin
-*.txt
-
 ## Linux
 
 # Temporary files

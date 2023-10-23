@@ -2,16 +2,6 @@
 
 This repository contains the code examples related to the [main repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course). They are based on the original course by O. Liechti and J. Ehrensberger.
 
-We recommend you to try each example and understand how it works.
+Each directory contains examples related to a specific topic.
 
-## Usage
-
-To run the examples, you can use the following command:
-
-```bash
-# Compile the example
-javac <ExampleName>.java
-
-# Run the example
-java <ExampleName>
-```
+Check the `README.md` file in each directory for more information.
