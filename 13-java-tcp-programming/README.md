@@ -4,7 +4,7 @@ We recommend you to try each example and understand how it works.
 
 ## Usage
 
-To run the examples, you can use the following command:
+To run the examples, you can use the following commands:
 
 ```bash
 # Compile the example
