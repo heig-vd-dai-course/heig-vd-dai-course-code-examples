@@ -27,7 +27,7 @@ public class TcpServerCachedThreadPoolTextualExample {
         executor.submit(new ClientHandler(clientSocket));
       }
     } catch (IOException e) {
-      System.out.println("[Server " + SERVER_ID + "] socket exception: " + e);
+      System.out.println("[Server " + SERVER_ID + "] exception: " + e);
     }
   }
 
@@ -85,7 +85,7 @@ public class TcpServerCachedThreadPoolTextualExample {
 
         System.out.println("[Server " + SERVER_ID + "] closing connection");
       } catch (IOException e) {
-        System.out.println("[Server " + SERVER_ID + "] socket exception: " + e);
+        System.out.println("[Server " + SERVER_ID + "] exception: " + e);
       }
     }
   }

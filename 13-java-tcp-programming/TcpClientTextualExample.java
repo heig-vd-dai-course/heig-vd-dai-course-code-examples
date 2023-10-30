@@ -49,7 +49,7 @@ class TcpClientTextualExample {
 
       System.out.println("[Client " + CLIENT_ID + "] closing connection");
     } catch (IOException e) {
-      System.out.println("[Client " + CLIENT_ID + "] socket exception: " + e);
+      System.out.println("[Client " + CLIENT_ID + "] exception: " + e);
     }
   }
 }

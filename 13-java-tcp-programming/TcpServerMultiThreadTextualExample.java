@@ -23,7 +23,7 @@ public class TcpServerMultiThreadTextualExample {
         clientThread.start();
       }
     } catch (IOException e) {
-      System.out.println("[Server " + SERVER_ID + "] socket exception: " + e);
+      System.out.println("[Server " + SERVER_ID + "] exception: " + e);
     }
   }
 
@@ -81,7 +81,7 @@ public class TcpServerMultiThreadTextualExample {
 
         System.out.println("[Server " + SERVER_ID + "] closing connection");
       } catch (IOException e) {
-        System.out.println("[Server " + SERVER_ID + "] socket exception: " + e);
+        System.out.println("[Server " + SERVER_ID + "] exception: " + e);
       }
     }
   }

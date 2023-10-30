@@ -56,13 +56,11 @@ class TcpServerSimpleTextualExample {
 
           System.out.println("[Server " + SERVER_ID + "] closing connection");
         } catch (IOException e) {
-          System.out.println(
-            "[Server " + SERVER_ID + "] socket exception: " + e
-          );
+          System.out.println("[Server " + SERVER_ID + "] exception: " + e);
         }
       }
     } catch (IOException e) {
-      System.out.println("[Server " + SERVER_ID + "] socket exception: " + e);
+      System.out.println("[Server " + SERVER_ID + "] exception: " + e);
     }
   }
 }
