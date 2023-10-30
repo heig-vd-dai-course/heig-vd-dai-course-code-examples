@@ -13,3 +13,7 @@ javac <ExampleName>.java
 # Run the example
 java <ExampleName>
 ```
+
+Please be aware that some examples require to be run in a specific order (the server before the client for example).
+
+There are an implementation for binary and text protocols.

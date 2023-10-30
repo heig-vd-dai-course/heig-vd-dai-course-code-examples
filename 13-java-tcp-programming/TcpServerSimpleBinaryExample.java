@@ -34,11 +34,7 @@ class TcpServerSimpleBinaryExample {
           );
 
           System.out.println(
-            "[Server " +
-            SERVER_ID +
-            "] receiving binary data from client. Storing in " +
-            FILENAME +
-            "..."
+            "[Server " + SERVER_ID + "] receiving binary data from client..."
           );
 
           int i;
@@ -47,7 +43,7 @@ class TcpServerSimpleBinaryExample {
           }
 
           System.out.println(
-            "[Server " + SERVER_ID + "] binary data saved in : " + FILENAME
+            "[Server " + SERVER_ID + "] binary data saved in '" + FILENAME + "'"
           );
 
           System.out.println("[Server " + SERVER_ID + "] closing connection");
