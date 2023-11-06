@@ -1,5 +1,7 @@
 # Java TCP programming
 
+Some of these examples are based on the original course by O. Liechti and J. Ehrensberger.
+
 We recommend you to try each example and understand how it works.
 
 ## Usage
@@ -16,4 +18,4 @@ java <ExampleName>
 
 Please be aware that some examples require to be run in a specific order (the server before the client for example).
 
-There are an implementation for binary and text protocols.
+There are only one client/server implementation for binary data as it is the same as the one for text data.

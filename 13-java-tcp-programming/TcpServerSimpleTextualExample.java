@@ -34,7 +34,12 @@ class TcpServerSimpleTextualExample {
           )
         ) {
           System.out.println(
-            "[Server " + SERVER_ID + "] new client connection"
+            "[Server " +
+            SERVER_ID +
+            "] new client connected from " +
+            socket.getInetAddress().getHostAddress() +
+            ":" +
+            socket.getPort()
           );
 
           System.out.println(

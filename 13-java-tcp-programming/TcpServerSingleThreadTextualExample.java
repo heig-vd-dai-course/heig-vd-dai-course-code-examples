@@ -56,7 +56,14 @@ public class TcpServerSingleThreadTextualExample {
           )
         )
       ) {
-        System.out.println("[Server " + SERVER_ID + "] new client connection");
+        System.out.println(
+          "[Server " +
+          SERVER_ID +
+          "] new client connected from " +
+          socket.getInetAddress().getHostAddress() +
+          ":" +
+          socket.getPort()
+        );
 
         System.out.println(
           "[Server " +
