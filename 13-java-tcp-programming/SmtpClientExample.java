@@ -55,7 +55,7 @@ public class SmtpClientExample {
       );
       out.write("It can contain multiple lines.\r\n");
       out.write(
-        "To finish an email, it must has the character '.' on a single line.\r\n"
+        "To finish an email, it must have the character '.' on a single line.\r\n"
       );
       out.write(".\r\n");
       out.flush();
