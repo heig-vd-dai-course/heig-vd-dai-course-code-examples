@@ -11,10 +11,15 @@ public class TcpServerCachedThreadPoolTextualExample {
   private static final String TEXTUAL_DATA = "👋 from Server " + SERVER_ID;
 
   public static void main(String[] args) {
+    ExecutorService executor = null;
+
     try (
       ServerSocket serverSocket = new ServerSocket(PORT);
-      ExecutorService executor = Executors.newCachedThreadPool();
+      // This can only be done in Java 19+. Update for next year.
+      // ExecutorService executor = Executors.newCachedThreadPool();
     ) {
+      executor = Executors.newCachedThreadPool();
+
       System.out.println(
         "[Server " + SERVER_ID + "] starting with id " + SERVER_ID
       );
@@ -28,6 +33,10 @@ public class TcpServerCachedThreadPoolTextualExample {
       }
     } catch (IOException e) {
       System.out.println("[Server " + SERVER_ID + "] exception: " + e);
+    } finally {
+      if (executor != null) {
+        executor.shutdown();
+      }
     }
   }
 

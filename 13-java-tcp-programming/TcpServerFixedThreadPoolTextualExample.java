@@ -12,12 +12,19 @@ public class TcpServerFixedThreadPoolTextualExample {
   private static final String TEXTUAL_DATA = "👋 from Server " + SERVER_ID;
 
   public static void main(String[] args) {
+    ExecutorService executor = null;
+
     try (
       ServerSocket serverSocket = new ServerSocket(PORT);
-      ExecutorService executor = Executors.newFixedThreadPool(
+      // This can only be done in Java 19+. Update for next year.
+      // ExecutorService executor = Executors.newFixedThreadPool(
+      //   NUMBER_OF_THREADS
+      // );
+    ) {
+      executor = Executors.newFixedThreadPool(
         NUMBER_OF_THREADS
       );
-    ) {
+
       System.out.println(
         "[Server " + SERVER_ID + "] starting with id " + SERVER_ID
       );
@@ -31,6 +38,10 @@ public class TcpServerFixedThreadPoolTextualExample {
       }
     } catch (IOException e) {
       System.out.println("[Server " + SERVER_ID + "] exception: " + e);
+    } finally {
+      if (executor != null) {
+        executor.shutdown();
+      }
     }
   }
 
