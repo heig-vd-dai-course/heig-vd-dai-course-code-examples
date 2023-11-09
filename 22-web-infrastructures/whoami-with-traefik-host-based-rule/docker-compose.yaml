@@ -1,0 +1,18 @@
+networks:
+  traefik:
+    name: traefik
+
+services:
+  whoami:
+    image: traefik/whoami:${WHOAMI_IMAGE_VERSION:-latest}
+    networks:
+      - traefik
+    expose:
+      - 80
+    labels:
+      ## Traefik
+      - traefik.enable=true
+      - traefik.docker.network=traefik
+      ## HTTP
+      - traefik.http.routers.whoami.entrypoints=http
+      - traefik.http.routers.whoami.rule=Host(`whoami.localhost`)

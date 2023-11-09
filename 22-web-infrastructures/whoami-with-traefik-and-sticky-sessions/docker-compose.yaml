@@ -1,0 +1,22 @@
+networks:
+  traefik:
+    name: traefik
+
+services:
+  whoami:
+    image: traefik/whoami:${WHOAMI_IMAGE_VERSION:-latest}
+    networks:
+      - traefik
+    expose:
+      - 80
+    labels:
+      ## Traefik
+      - traefik.enable=true
+      - traefik.docker.network=traefik
+      ## HTTP
+      - traefik.http.routers.whoami.entrypoints=http
+      - traefik.http.routers.whoami.rule=Host(`${WHOAMI_DOMAIN_NAME}`)
+      # We add the sticky session configuration
+      - traefik.http.services.whoami.loadbalancer.sticky=true
+      - traefik.http.services.whoami.loadbalancer.sticky.cookie.name=traefik_cookie
+      - traefik.http.services.whoami.loadbalancer.sticky.cookie.httpOnly=true

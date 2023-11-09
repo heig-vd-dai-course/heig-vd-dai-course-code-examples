@@ -1,0 +1,34 @@
+networks:
+  traefik:
+    name: traefik
+
+services:
+  traefik:
+    image: traefik:${TRAEFIK_IMAGE_VERSION:-latest}
+    command:
+      ## Global
+      # Uncomment next line when testing
+      # - --log.level=DEBUG
+      - --api.dashboard=true
+      - --api.insecure=true
+      ## Docker
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      ## Entrypoints
+      - --entrypoints.http.address=:80
+    restart: unless-stopped
+    networks:
+      - traefik
+    ports:
+      - 80:80
+      - 8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    labels:
+      ## Traefik
+      - traefik.enable=true
+      - traefik.docker.network=traefik
+      # HTTP
+      - traefik.http.routers.traefik-http.entrypoints=http
+      - traefik.http.routers.traefik-http.rule=Host(`${TRAEFIK_DOMAIN_NAME}`)
+      - traefik.http.routers.traefik-http.service=api@internal
