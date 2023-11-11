@@ -36,11 +36,11 @@ services:
       - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
       # We switch to DNS-01 challenge to generate certificates
       - --certificatesresolvers.letsencrypt.acme.dnschallenge=true
-      - --certificatesresolvers.letsencrypt.acme.dnschallenge.provider=desec
+      - --certificatesresolvers.letsencrypt.acme.dnschallenge.provider=${TRAEFIK_ACME_DNS_PROVIDER}
       - --certificatesresolvers.letsencrypt.acme.dnschallenge.delayBeforeCheck=30
     restart: unless-stopped
-    environment:
-      - DESEC_TOKEN=${TRAEFIK_DESEC_TOKEN}
+    env_file:
+      - dns-challenge.env
     networks:
       - traefik
     ports:

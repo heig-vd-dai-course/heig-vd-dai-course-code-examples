@@ -1,6 +1,6 @@
 networks:
   traefik:
-    name: traefik
+    external: true
 
 services:
   whoami-without-stripprefix:
