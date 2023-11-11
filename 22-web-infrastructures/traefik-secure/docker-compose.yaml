@@ -48,16 +48,17 @@ services:
       ## Middlewares
       # We add a Basic Auth middleware using the users defined in the Docker secret
       - traefik.http.middlewares.basic-auth.basicauth.usersFile=/run/secrets/auth_users
+      # We add a middleware to redirect HTTP to HTTPS
       - traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https
       - traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true
       ## HTTP
       - traefik.http.routers.traefik-http.entrypoints=http
-      - traefik.http.routers.traefik-http.rule=Host(`${TRAEFIK_DOMAIN_NAME}`)
+      - traefik.http.routers.traefik-http.rule=Host(`${TRAEFIK_FULLY_QUALIFIED_DOMAIN_NAME}`)
       - traefik.http.routers.traefik-http.service=api@internal
       - traefik.http.routers.traefik-http.middlewares=redirect-to-https
       ## HTTPS
       - traefik.http.routers.traefik-https.entrypoints=https
-      - traefik.http.routers.traefik-https.rule=Host(`${TRAEFIK_DOMAIN_NAME}`)
+      - traefik.http.routers.traefik-https.rule=Host(`${TRAEFIK_FULLY_QUALIFIED_DOMAIN_NAME}`)
       - traefik.http.routers.traefik-https.service=api@internal
       - traefik.http.routers.traefik-https.middlewares=basic-auth
       - traefik.http.routers.traefik-https.tls=true

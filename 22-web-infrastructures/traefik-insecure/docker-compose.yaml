@@ -30,5 +30,5 @@ services:
       - traefik.docker.network=traefik
       # HTTP
       - traefik.http.routers.traefik-http.entrypoints=http
-      - traefik.http.routers.traefik-http.rule=Host(`${TRAEFIK_DOMAIN_NAME}`)
+      - traefik.http.routers.traefik-http.rule=Host(`${TRAEFIK_FULLY_QUALIFIED_DOMAIN_NAME}`)
       - traefik.http.routers.traefik-http.service=api@internal

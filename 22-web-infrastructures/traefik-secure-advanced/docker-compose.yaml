@@ -25,10 +25,11 @@ services:
       - --entrypoints.http.http.redirections.entrypoint.permanent=true
       - --entrypoints.https.address=:443
       # We enable TLS for all HTTPS traffic
+      - --entrypoints.https.http.tls=true
       - --entrypoints.https.http.tls.certresolver=letsencrypt
-      # We ask Let's Encrypt to generate certificates for our base domain and wildcard subdomain
-      - --entrypoints.https.http.tls.domains[0].main=${TRAEFIK_BASE_DOMAIN_NAME}
-      - --entrypoints.https.http.tls.domains[0].sans=*.${TRAEFIK_BASE_DOMAIN_NAME}
+      # We ask Let's Encrypt to generate certificates for our root domain and wildcard subdomains
+      - --entrypoints.https.http.tls.domains[0].main=${TRAEFIK_ROOT_FULLY_QUALIFIED_DOMAIN_NAME}
+      - --entrypoints.https.http.tls.domains[0].sans=*.${TRAEFIK_ROOT_FULLY_QUALIFIED_DOMAIN_NAME}
       ## Certificates
       # Uncomment next line when testing
       # - --certificatesResolvers.letsencrypt.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
@@ -62,11 +63,11 @@ services:
       # No more need of the HTTP configuration as all HTTP traffic is redirected to HTTPS
       ## HTTPS
       - traefik.http.routers.traefik.entrypoints=https
-      - traefik.http.routers.traefik.rule=Host(`${TRAEFIK_DOMAIN_NAME}`)
+      - traefik.http.routers.traefik.rule=Host(`${TRAEFIK_FULLY_QUALIFIED_DOMAIN_NAME}`)
       - traefik.http.routers.traefik.service=api@internal
       - traefik.http.routers.traefik.middlewares=basic-auth
       - traefik.http.routers.traefik.tls=true
       - traefik.http.routers.traefik.tls.certresolver=letsencrypt
-      # We ask Let's Encrypt to generate certificates for our base domain and wildcard subdomain
-      - traefik.http.routers.traefik.tls.domains[0].main=${TRAEFIK_BASE_DOMAIN_NAME}
-      - traefik.http.routers.traefik.tls.domains[0].sans=*.${TRAEFIK_BASE_DOMAIN_NAME}
+      # We ask Let's Encrypt to generate certificates for our root domain and wildcard subdomain
+      - traefik.http.routers.traefik.tls.domains[0].main=${TRAEFIK_ROOT_FULLY_QUALIFIED_DOMAIN_NAME}
+      - traefik.http.routers.traefik.tls.domains[0].sans=*.${TRAEFIK_ROOT_FULLY_QUALIFIED_DOMAIN_NAME}

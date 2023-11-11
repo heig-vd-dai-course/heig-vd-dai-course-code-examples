@@ -2,7 +2,8 @@
 
 ## Configuration
 
-You can configure the OpenSSH server by editing the [`openssh-server.env`](./openssh-server.env) file.
+You can configure the OpenSSH server by editing the
+[`openssh-server.env`](./openssh-server.env) file.
 
 ## Usage
 

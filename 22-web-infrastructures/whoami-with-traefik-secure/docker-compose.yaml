@@ -15,12 +15,12 @@ services:
       - traefik.docker.network=traefik
       ## HTTP
       - traefik.http.routers.whoami-http.entrypoints=http
-      - traefik.http.routers.whoami-http.rule=Host(`${WHOAMI_DOMAIN_NAME}`)
+      - traefik.http.routers.whoami-http.rule=Host(`${WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME}`)
       # We add a middleware to redirect HTTP to HTTPS
       - traefik.http.routers.whoami-http.middlewares=redirect-to-https
       ## HTTPS
       # We add the HTTPS configuration
       - traefik.http.routers.whoami-https.entrypoints=https
-      - traefik.http.routers.whoami-https.rule=Host(`${WHOAMI_DOMAIN_NAME}`)
+      - traefik.http.routers.whoami-https.rule=Host(`${WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME}`)
       - traefik.http.routers.whoami-https.tls=true
       - traefik.http.routers.whoami-https.tls.certresolver=letsencrypt

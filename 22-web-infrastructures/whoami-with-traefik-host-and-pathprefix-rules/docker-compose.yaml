@@ -15,4 +15,5 @@ services:
       - traefik.docker.network=traefik
       ## HTTP
       - traefik.http.routers.whoami.entrypoints=http
-      - traefik.http.routers.whoami.rule=Host(`whoami.localhost`)
+      # We use Host and PathPrefix rules at the same time
+      - traefik.http.routers.whoami.rule=Host(`${WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME}`) && PathPrefix(`/whoami`)

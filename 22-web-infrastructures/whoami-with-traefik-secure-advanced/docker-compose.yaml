@@ -19,4 +19,3 @@ services:
       # No mode need to set the TLS resolver here, as we are using wildcard certificates
       - traefik.http.routers.whoami.entrypoints=https
       - traefik.http.routers.whoami.rule=Host(`${WHOAMI_DOMAIN_NAME}`)
-      - traefik.http.routers.whoami.tls=true
