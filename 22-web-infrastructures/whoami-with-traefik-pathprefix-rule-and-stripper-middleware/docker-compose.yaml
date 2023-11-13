@@ -15,7 +15,7 @@ services:
       - traefik.docker.network=traefik
       ## HTTP
       - traefik.http.routers.whoami-without-stripprefix.entrypoints=http
-      - traefik.http.routers.whoami-without-stripprefix.rule=Host(`localhost`) && PathPrefix(`/whoami-without-stripprefix`)
+      - traefik.http.routers.whoami-without-stripprefix.rule=PathPrefix(`/whoami-without-stripprefix`)
 
   whoami-with-stripprefix:
     image: traefik/whoami:${WHOAMI_IMAGE_VERSION:-latest}
@@ -32,6 +32,6 @@ services:
       - traefik.http.middlewares.whoami-stripprefix.stripprefix.prefixes=/whoami-with-stripprefix
       ## HTTP
       - traefik.http.routers.whoami-with-stripprefix.entrypoints=http
-      - traefik.http.routers.whoami-with-stripprefix.rule=Host(`localhost`) && PathPrefix(`/whoami-with-stripprefix`)
+      - traefik.http.routers.whoami-with-stripprefix.rule=PathPrefix(`/whoami-with-stripprefix`)
       # We add the middleware created above in the middleware chain of this router
       - traefik.http.routers.whoami-with-stripprefix.middlewares=whoami-stripprefix

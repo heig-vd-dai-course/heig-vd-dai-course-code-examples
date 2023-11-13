@@ -11,7 +11,7 @@ The [`traefik-secure`](../traefik-secure/README.md) example must be running.
 
 ### Update the `.env` file
 
-Update the `.env` file with your own values:
+Update the [`.env`](.env) file with your own values:
 
 - `WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME`: the fully qualified domain name to
   access whoami

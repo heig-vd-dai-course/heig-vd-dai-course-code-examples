@@ -21,6 +21,8 @@ features:
 - Make use of the
   [DNS challenge](https://doc.traefik.io/traefik/https/acme/#dnschallenge) to
   generate HTTPS certificates, even if Traefik is not publicly accessible
+- Enable HTTPS globally for all services (entrypoint level)
+- HTTP is not accessible anymore
 - Generate a common HTTPS certificate for all the services (wildcard
   certificate)
 - Redirect all HTTP requests to HTTPS at the entrypoint level instead of using
@@ -49,9 +51,14 @@ You can find a list of supported DNS providers at
 
 For this example, we will use [deSEC](https://desec.io/) as our DNS provider.
 
-### Update the `.env` file
+### Create the API key(s) for the DNS provider
 
-Update the `.env` file with your own values:
+You must create the API key(s) for the DNS provider. For deSEC, you can follow
+the instructions at <https://desec.io/api/v1/docs/>.
+
+### Update the `.env` and `dns-challenge.env` files
+
+Update the [`.env`](.env) file with your own values:
 
 - `TRAEFIK_ACME_EMAIL`: your email address
 - `TRAEFIK_ACME_DNS_PROVIDER`: the name of your DNS provider - check the list of
@@ -64,6 +71,14 @@ Update the `.env` file with your own values:
 - `TRAEFIK_FULLY_QUALIFIED_DOMAIN_NAME`: the fully qualified domain name to
   access Traefik - by default, Traefik will be accessible at
   `https://traefik.TRAEFIK_ROOT_FULLY_QUALIFIED_DOMAIN_NAME`
+
+Update the [`dns-challenge.env`](./dns-challenge.env) file with the values
+needed by your DNS provider based on the
+[list of supported DNS providers](https://doc.traefik.io/traefik/https/acme/#providers).
+
+For deSEC, you must set the following environment variables:
+
+- `DESEC_TOKEN`: the token to access the deSEC API
 
 ### Add the wildcard DNS entry
 

@@ -11,7 +11,7 @@ You must have a domain name ready.
 
 ### Update the `.env` file
 
-Update the `.env` file with your own values:
+Update the [`.env`](.env) file with your own values:
 
 - `TRAEFIK_ACME_EMAIL`: your email address
 - `TRAEFIK_FULLY_QUALIFIED_DOMAIN_NAME`: the fully qualified domain name to
