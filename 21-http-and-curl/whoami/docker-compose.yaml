@@ -1,5 +1,0 @@
-services:
-  whoami:
-    image: traefik/whoami:${WHOAMI_IMAGE_VERSION:-latest}
-    ports:
-      - 8080:80

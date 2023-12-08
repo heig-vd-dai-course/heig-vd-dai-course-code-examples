@@ -21,9 +21,7 @@ public class TcpServerFixedThreadPoolTextualExample {
       //   NUMBER_OF_THREADS
       // );
     ) {
-      executor = Executors.newFixedThreadPool(
-        NUMBER_OF_THREADS
-      );
+      executor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
       System.out.println(
         "[Server " + SERVER_ID + "] starting with id " + SERVER_ID
