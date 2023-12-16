@@ -21,7 +21,7 @@ Start the containers:
 
 ```sh
 # Start the containers
-docker-compose up
+docker compose up
 ```
 
 Open your browser and go to <http://whoami.localhost> to access whoami.

@@ -122,7 +122,7 @@ Start the containers on the virtual machine:
 
 ```sh
 # Start the containers
-docker-compose up -d
+docker compose up -d
 ```
 
 Open your browser and go to the fully qualified domain name of the Traefik

@@ -12,7 +12,7 @@ Start the containers:
 
 ```sh
 # Start the containers
-docker-compose up -d
+docker compose up -d
 ```
 
 Open your browser and go to public IP address of your virtual machine with the
