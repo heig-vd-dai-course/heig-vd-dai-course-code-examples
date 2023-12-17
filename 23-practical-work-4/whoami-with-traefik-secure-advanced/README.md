@@ -65,7 +65,7 @@ You should now be able to access whoami with a valid HTTPS certificate.
 The advantages of this configuration reside in the configuration of the Docker
 Compose files and how versatile you can add new services.
 
-If you compare both solutions, you will notice that the `docker-compose.yaml`
+If you compare both solutions, you will notice that the `docker-compose.yml`
 files are cleaner and easier to read in the current example.
 
 You can now add as many services as you want without having to worry about

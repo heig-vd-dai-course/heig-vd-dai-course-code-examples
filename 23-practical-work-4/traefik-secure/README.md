@@ -48,7 +48,7 @@ Docker Compose allows the use of
 [Docker Secrets](https://docs.docker.com/compose/use-secrets/) to pass sensitive
 information to a service.
 
-The [`docker-compose.yaml`](./docker-compose.yaml) file is already configured to
+The [`docker-compose.yml`](./docker-compose.yml) file is already configured to
 use the `secrets/auth-users.txt` file as a Docker Secret. You must create the
 `auth-users.txt` file in the `secrets` directory.
 

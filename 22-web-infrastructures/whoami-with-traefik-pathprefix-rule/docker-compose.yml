@@ -1,5 +1,7 @@
 networks:
   traefik:
+    # The external option allows this network to be used by
+    # Traefik containers declared in other stack files
     external: true
 
 services:

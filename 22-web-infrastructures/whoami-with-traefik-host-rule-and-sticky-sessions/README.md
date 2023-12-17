@@ -31,7 +31,7 @@ docker compose up --scale whoami-without-sticky-sessions=3 --scale whoami
 Open your browser and go to <http://whoami1.localhost> to access whoami.
 
 Refresh the page several times. You should notice the request being served by
-different containers.
+different containers in a round-robin fashion (one request per container).
 
 Access a new tab in your browser and go to <http://whoami2.localhost> to access
 whoami.

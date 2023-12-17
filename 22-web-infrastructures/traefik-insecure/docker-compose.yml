@@ -9,26 +9,45 @@ services:
       ## Global
       # Uncomment next line when testing
       # - --log.level=DEBUG
+      # Enable the web UI
       - --api.dashboard=true
+      # Allow access to the web UI on port 8080 (insecure)
       - --api.insecure=true
       ## Docker
+      # Use Docker as a provider
       - --providers.docker=true
+      # Do not expose containers by default
       - --providers.docker.exposedbydefault=false
       ## Entrypoints
+      # Define an entrypoint for HTTP on port 80
       - --entrypoints.http.address=:80
     restart: unless-stopped
     networks:
+      # Attach the Traefik container to the traefik network
       - traefik
     ports:
+      # Expose port 80 on the host for all incoming HTTP traffic
       - 80:80
+      # Expose port 8080 on the host for the web UI
       - 8080:8080
     volumes:
+      # This is needed for Traefik to be able to listen to the Docker events
+      # It allows Traefik to react almost immediately to changes in the
+      # containers it manages
       - /var/run/docker.sock:/var/run/docker.sock:ro
+    # Labels can be attached to containers for various customizations.
+    # In this case, the labels are to configure Traefik
     labels:
       ## Traefik
+      # Enable Traefik for this container
       - traefik.enable=true
+      # Help Traefik find this container on the network
       - traefik.docker.network=traefik
       # HTTP
+      # The entrypoint of this container is HTTP
       - traefik.http.routers.traefik-http.entrypoints=http
+      # The container is accessible with the fully qualified domain name
       - traefik.http.routers.traefik-http.rule=Host(`${TRAEFIK_FULLY_QUALIFIED_DOMAIN_NAME}`)
+      # Traefik starts a special service called api@internal on port 8080
+      # that we need to attach to this container to be able to use the web UI
       - traefik.http.routers.traefik-http.service=api@internal
