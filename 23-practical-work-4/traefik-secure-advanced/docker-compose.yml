@@ -66,9 +66,3 @@ services:
       - traefik.http.routers.traefik.rule=Host(`${TRAEFIK_FULLY_QUALIFIED_DOMAIN_NAME}`)
       - traefik.http.routers.traefik.service=api@internal
       - traefik.http.routers.traefik.middlewares=basic-auth
-      ## TODO: Valide if we still need these lines
-      # - traefik.http.routers.traefik.tls=true
-      # - traefik.http.routers.traefik.tls.certresolver=letsencrypt
-      # # We ask Let's Encrypt to generate certificates for our root domain and wildcard subdomain
-      # - traefik.http.routers.traefik.tls.domains[0].main=${TRAEFIK_ROOT_FULLY_QUALIFIED_DOMAIN_NAME}
-      # - traefik.http.routers.traefik.tls.domains[0].sans=*.${TRAEFIK_ROOT_FULLY_QUALIFIED_DOMAIN_NAME}

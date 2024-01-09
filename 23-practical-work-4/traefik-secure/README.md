@@ -15,7 +15,7 @@ Update the [`.env`](.env) file with your own values:
 
 - `TRAEFIK_ACME_EMAIL`: your email address
 - `TRAEFIK_FULLY_QUALIFIED_DOMAIN_NAME`: the fully qualified domain name to
-  access Traefik
+  access Traefik (e.g. `traefik.example.com` - **without** the `http` or `https`)
 
 ### Add the Traefik service fully qualified domain name to DNS zone
 
