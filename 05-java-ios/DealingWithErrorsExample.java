@@ -71,9 +71,8 @@ class DealingWithErrorsExample {
   /**
    * This example is the best practice. It catches an exception and closes the resources properly
    * with the try-with-resources statement. It is the best practice because it avoids resource leaks
-   * as it always closes the resources properly with the try-with-resources statement.
-   *
-   * <p>It is also more concise and easier to read than the previous examples.
+   * as it always closes the resources properly with the try-with-resources statement. It is also
+   * more concise and easier to read than the previous examples.
    */
   public static void tryWithResourcesExample() {
     try (Reader reader = new FileReader("missing.file");
