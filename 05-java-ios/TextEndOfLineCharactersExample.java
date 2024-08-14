@@ -16,7 +16,7 @@ class TextEndOfLineCharactersExample {
 
     String line;
     while ((line = br.readLine()) != null) {
-      // Careful: line does not contain end-of-line characters
+      // Careful: line does not contain end of line characters
       bw.write(line + END_OF_LINE);
     }
 
