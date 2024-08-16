@@ -17,11 +17,6 @@ class DealingWithErrorsExample {
     tryWithResourcesExample();
   }
 
-  /**
-   * This example is a bad practice. It catches an exception but does not close the resources
-   * properly. It is a bad practice because it can lead to resource leaks (= resources that are not
-   * closed properly and that are not available for other parts of the program).
-   */
   public static void tryCatchWithoutFinallyExample() {
     try {
       Reader reader = new FileReader("missing.file");
@@ -33,11 +28,6 @@ class DealingWithErrorsExample {
     }
   }
 
-  /**
-   * This example is a better practice. It catches an exception and closes the resources properly.
-   * It is a better practice because it avoids resource leaks as it always closes the resources
-   * properly with the `finally` block.
-   */
   public static void tryCatchFinallyExample() {
     Reader reader = null;
     Writer writer = null;
@@ -68,12 +58,6 @@ class DealingWithErrorsExample {
     }
   }
 
-  /**
-   * This example is the best practice. It catches an exception and closes the resources properly
-   * with the try-with-resources statement. It is the best practice because it avoids resource leaks
-   * as it always closes the resources properly with the try-with-resources statement. It is also
-   * more concise and easier to read than the previous examples.
-   */
   public static void tryWithResourcesExample() {
     try (Reader reader = new FileReader("missing.file");
         Writer writer = new FileWriter("missing.file")) {
