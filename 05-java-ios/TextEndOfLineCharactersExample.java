@@ -1,6 +1,16 @@
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * This program copies the content of a text file to another text file under a new name. It
+ * explicitly set the end of line character to '\n' to ensure that the output file has the same end
+ * of line character on all platforms. It opens the input file using a FileInputStream class as
+ * binary data. It then uses the class InputStreamReader to decode the binary data to text data
+ * using the UTF-8 character encoding. And finally, it uses the BufferedReader class to read the
+ * text data with a buffer. It opens the output file using a FileOutputStream class as binary data.
+ * It then uses th class OutputStreamWriter to write the file with the UTF-8 character encoding. And
+ * finally, it uses a BufferedWriter class to write the binary data with a buffer.
+ */
 class TextEndOfLineCharactersExample {
 
   public static String END_OF_LINE = "\n";
