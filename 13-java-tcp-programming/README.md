@@ -21,7 +21,7 @@ Please be aware that some examples require to be run in a specific order (the
 server before the client for example).
 
 For the SmtpClientExample, you will need to launch a MailHog instance, for
-example via what was presented in 11-smtp-and-telnet.
+example via what was presented in 12-smtp-and-ncat.
 
 There are only one client/server implementation for binary data as it is the
 same as the one for text data.
