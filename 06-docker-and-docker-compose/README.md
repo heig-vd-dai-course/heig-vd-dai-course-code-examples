@@ -15,21 +15,13 @@ They are ordered by complexity. You should explore them in the following order:
 - [Docker Compose with volumes](./08-docker-compose-with-volumes)
 - [Docker Compose with environment variables](./09-docker-compose-with-environment-variables)
 
-## Part 2 - Package and run your own applications with Docker and Docker Compose
+## Part 2 - Package, publish, and run your own applications with Docker and Docker Compose
 
 > [!CAUTION]
 >
 > This part is still a work in progress. It will be completed in the future.
 > Please do not use it for now.
 
-- [`10-package-and-run-a-java-application-with-a-dockerfile-and-docker-compose`](./10-package-and-run-a-java-application-with-a-dockerfile-and-docker-compose)
-
-## Part 3 - Publish and run your own applications with Docker and Docker Compose
-
-> [!CAUTION]
->
-> This part is still a work in progress. It will be completed in the future.
-> Please do not use it for now.
-
-- [`11-publish-a-java-application-with-a-dockerfile-and-docker-compose`](./11-publish-a-java-application-with-a-dockerfile-and-docker-compose)
-- [`12-run-a-java-application-with-docker-compose`](./12-run-a-java-application-with-docker-compose)
+- [Package a Java application with Docker](./10-package-a-java-application-with-docker)
+- [Publish a Java application with Docker](./11-publish-a-java-application-with-docker)
+- [Run a Java application with Docker Compose](./12-run-a-java-application-with-docker-compose)

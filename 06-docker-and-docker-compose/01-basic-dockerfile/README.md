@@ -1,6 +1,6 @@
 # Basic Dockerfile
 
-This Dockerfile uses two instructions:
+This Dockerfile example uses two instructions:
 
 - `FROM`
 - `WORKDIR`

@@ -1,6 +1,6 @@
 # Dockerfile with command
 
-This Dockerfile uses one new instruction:
+This Dockerfile example uses one new instruction:
 
 - `CMD`
 

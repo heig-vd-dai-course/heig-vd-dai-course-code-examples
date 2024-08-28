@@ -1,6 +1,6 @@
 # Dockerfile with run commands
 
-This Dockerfile uses one new instruction:
+This Dockerfile example uses one new instruction:
 
 - `RUN`
 

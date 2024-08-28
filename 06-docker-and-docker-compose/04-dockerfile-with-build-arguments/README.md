@@ -1,6 +1,6 @@
 # Dockerfile with build arguments
 
-This Dockerfile uses one new instruction:
+This Dockerfile example uses one new instruction:
 
 - `ARG`
 
