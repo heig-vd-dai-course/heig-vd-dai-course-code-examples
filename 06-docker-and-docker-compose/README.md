@@ -3,8 +3,6 @@
 This repository contains several examples of Docker and Docker Compose files.
 They are ordered by complexity. You should explore them in the following order:
 
-## Part 1 - Basics of Docker and Docker Compose
-
 - [Basic Dockerfile](./01-basic-dockerfile)
 - [Dockerfile with command](./02-dockerfile-with-command)
 - [Dockerfile with entrypoint and command](./03-dockerfile-with-entrypoint-and-command)
@@ -14,14 +12,3 @@ They are ordered by complexity. You should explore them in the following order:
 - [Docker Compose with ports](./07-docker-compose-with-ports)
 - [Docker Compose with volumes](./08-docker-compose-with-volumes)
 - [Docker Compose with environment variables](./09-docker-compose-with-environment-variables)
-
-## Part 2 - Package, publish, and run your own applications with Docker and Docker Compose
-
-> [!CAUTION]
->
-> This part is still a work in progress. It will be completed in the future.
-> Please do not use it for now.
-
-- [Package a Java application with Docker](./10-package-a-java-application-with-docker)
-- [Publish a Java application with Docker](./11-publish-a-java-application-with-docker)
-- [Run a Java application with Docker Compose](./12-run-a-java-application-with-docker-compose)
