@@ -16,11 +16,11 @@ class TextEndOfLineCharactersExample {
   public static String END_OF_LINE = "\n";
 
   public static void main(String[] args) throws IOException {
-    InputStream is = new FileInputStream("LineEndingsExample.java");
+    InputStream is = new FileInputStream("TextEndOfLineCharactersExample.java");
     Reader reader = new InputStreamReader(is, StandardCharsets.UTF_8);
     BufferedReader br = new BufferedReader(reader);
 
-    OutputStream os = new FileOutputStream("LineEndingsExample.txt");
+    OutputStream os = new FileOutputStream("TextEndOfLineCharactersExample.txt");
     Writer writer = new OutputStreamWriter(os, StandardCharsets.UTF_8);
     BufferedWriter bw = new BufferedWriter(writer);
 
