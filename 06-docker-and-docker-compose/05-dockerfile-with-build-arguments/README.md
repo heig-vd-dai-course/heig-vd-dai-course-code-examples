@@ -24,22 +24,22 @@ docker build -t dockerfile-with-build-arguments .
 
 ## Run the Docker container
 
-If you run the Docker container, you will notice the default output is the same
-as the previous run: `Hello, World!`.
+If you run the Docker container, it will display the current date and time for
+the given timezone.
 
-## Rebuid the Docker image with a different argument
+## Rebuild the Docker image with a different argument
 
 To rebuild the Docker image with a different argument, run the following
 command:
 
 ```sh
 # Rebuild the Docker image with a different argument
-docker build -t dockerfile-with-build-arguments --build-arg MESSAGE="Hello, DAI student!" .
+docker build -t dockerfile-with-build-arguments --build-arg TIMEZONE="UTC" .
 ```
 
-This will change the default output of the Docker container to
-`Hello, DAI student!`. Try to run the Docker container again to see the new
-output.
+This will change the default timezone to `UTC` instead of `Europe/Zurich` and
+rebuild the Docker image with this new value. Try to run the Docker container
+again to see the new output.
 
 Build arguments can be useful to pass values to the Dockerfile at build time.
 They can be used to customize the build process and the resulting Docker image,
