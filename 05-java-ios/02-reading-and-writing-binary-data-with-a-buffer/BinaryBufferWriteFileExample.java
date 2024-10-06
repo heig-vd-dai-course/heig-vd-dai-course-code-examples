@@ -23,6 +23,5 @@ class BinaryBufferWriteFileExample {
     // Flush the buffer to write the remaining bytes
     bos.flush();
     bos.close();
-    fos.close();
   }
 }

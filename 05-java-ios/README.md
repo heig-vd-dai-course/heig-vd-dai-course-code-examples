@@ -1,9 +1,18 @@
 # Java IOs
 
-Some of these examples are based on the original course by O. Liechti and J.
-Ehrensberger.
+_Some of these examples are based on the original course by O. Liechti and J.
+Ehrensberger._
 
-We recommend you to try each example and understand how it works.
+This repository contains several examples of Docker and Docker Compose files.
+They are ordered by complexity. You should explore them in the following order:
+
+- [Reading and writing binary data](./01-reading-and-writing-binary-data)
+- [Reading and writing binary data with a buffer](./02-reading-and-writing-binary-data-with-a-buffer)
+- [Character encodings](./03-character-encodings)
+- [Reading and writing text data](./04-reading-and-writing-text-data)
+- [Reading and writing text data with a buffer](./05-reading-and-writing-text-data-with-a-buffer)
+- [End of line characters](./06-end-of-line-characters)
+- [Dealing with errors](./07-dealing-with-errors)
 
 ## Usage
 

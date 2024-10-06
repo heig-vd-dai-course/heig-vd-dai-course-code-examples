@@ -21,8 +21,9 @@ class TextBufferReadAndWriteFileExample {
       bw.write(c);
     }
 
-    writer.flush();
-    writer.close();
-    reader.close();
+    // Flush the buffer to write the remaining bytes
+    bw.flush();
+    bw.close();
+    br.close();
   }
 }

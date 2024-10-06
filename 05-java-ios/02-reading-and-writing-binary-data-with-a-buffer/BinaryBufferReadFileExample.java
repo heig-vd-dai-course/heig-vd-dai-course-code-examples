@@ -14,7 +14,7 @@ class BinaryBufferReadFileExample {
 
   public static void main(String[] args) throws IOException {
     InputStream fis = new FileInputStream("binary-file.bin");
-    InputStream bis = new BufferedInputStream(fis);
+    BufferedInputStream bis = new BufferedInputStream(fis);
 
     // -1 indicates the end of the file
     int b;
@@ -22,7 +22,7 @@ class BinaryBufferReadFileExample {
       System.out.print(b);
     }
 
+    // Closing the BufferedInputStream automatically closes the FileInputStream
     bis.close();
-    fis.close();
   }
 }
