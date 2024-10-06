@@ -22,6 +22,24 @@ To build the Docker image, run the following command:
 docker build -t dockerfile-with-build-arguments .
 ```
 
+> [!TIP]
+>
+> For people using an ARM computer (Apple Silicon), you might need to add the
+> --platform=linux/amd64 parameter to the build command as well as Arch Linux
+> for ARM is not officially supported yet.
+>
+> This allows you to build the Docker image for the linux/amd64 architecture
+> instead of the default architecture of your computer.
+>
+> A message might be displayed warning you about incompatible platforms but you
+> can ignore it.
+>
+> Using this method can can have performance penalties, but it allows you to
+> build unsupported architectures until they are officially supported.
+>
+> You can find more information about multi-architecture builds in the official
+> documentation: <https://docs.docker.com/build/building/multi-platform/>.
+
 ## Run the Docker container
 
 If you run the Docker container, it will display the current date and time for
