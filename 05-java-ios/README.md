@@ -7,10 +7,10 @@ This repository contains several examples of Docker and Docker Compose files.
 They are ordered by complexity. You should explore them in the following order:
 
 - [Reading and writing binary data](./01-reading-and-writing-binary-data)
-- [Reading and writing binary data with a buffer](./02-reading-and-writing-binary-data-with-a-buffer)
+- [Reading and writing binary data with buffers](./02-reading-and-writing-binary-data-with-buffers)
 - [Character encodings](./03-character-encodings)
 - [Reading and writing text data](./04-reading-and-writing-text-data)
-- [Reading and writing text data with a buffer](./05-reading-and-writing-text-data-with-a-buffer)
+- [Reading and writing text data with buffers](./05-reading-and-writing-text-data-with-buffers)
 - [End of line characters](./06-end-of-line-characters)
 - [Dealing with errors](./07-dealing-with-errors)
 
