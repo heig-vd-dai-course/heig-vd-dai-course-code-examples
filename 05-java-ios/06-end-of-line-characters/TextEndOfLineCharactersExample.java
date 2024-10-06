@@ -31,7 +31,7 @@ class TextEndOfLineCharactersExample {
     }
 
     bw.flush();
+    bw.close();
     br.close();
-    is.close();
   }
 }
