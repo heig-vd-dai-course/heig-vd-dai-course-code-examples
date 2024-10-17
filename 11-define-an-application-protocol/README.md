@@ -29,7 +29,7 @@ The SMS protocol is a text message transport protocol. It must use the TCP
 (Transmission Control Protocol) to ensure the reliability of data transmission
 and must also use port 1234.
 
-> ![NOTE]
+> [!NOTE]
 >
 > Almost all applications can be implemented using different transport protocols
 > (TCP, UDP, etc.).
@@ -39,7 +39,7 @@ and must also use port 1234.
 > transmission, it is better to use TCP. If the application requires fast data
 > transmission, it is better to use UDP.
 
-> ![NOTE]
+> [!NOTE]
 >
 > The port should be one of the unused ports bigger than 1024.
 >
@@ -67,7 +67,7 @@ recipient.
 The server must verify that the recipient is connected and that the message does
 not exceed 100 characters.
 
-> ![NOTE]
+> [!NOTE]
 >
 > Other constraints can be added to the application protocol, even when not
 > asked for. It is important to define these constraints to ensure the
