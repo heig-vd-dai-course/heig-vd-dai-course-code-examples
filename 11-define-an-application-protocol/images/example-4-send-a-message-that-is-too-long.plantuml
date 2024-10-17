@@ -16,7 +16,7 @@ end note
 c1->s : Establish connection
 c1<-->s : Connection established
 
-c1->s: JOIN alicez
+c1->s: JOIN alice
 s->c1: OK
 
 c2->s : Establish connection
