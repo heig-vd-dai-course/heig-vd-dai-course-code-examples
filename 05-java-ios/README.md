@@ -3,7 +3,10 @@
 _Some of these examples are based on the original course by O. Liechti and J.
 Ehrensberger._
 
-This repository contains several examples of Docker and Docker Compose files.
+This repository contains several examples of Java IOs implementations.
+
+We recommend you to try each example and understand how it works.
+
 They are ordered by complexity. You should explore them in the following order:
 
 - [Reading and writing binary data](./01-reading-and-writing-binary-data)
