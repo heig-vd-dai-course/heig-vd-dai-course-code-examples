@@ -25,5 +25,5 @@ c2->s : Establish connection
 c2<-->s : Connection established
 
 c2->s: JOIN alice
-s->c2: ERROR 2
+s->c2: ERROR 1
 @enduml
