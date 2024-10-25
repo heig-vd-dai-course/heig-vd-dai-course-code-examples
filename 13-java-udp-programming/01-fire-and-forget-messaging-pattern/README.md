@@ -9,7 +9,9 @@ A very simple fire-and-forget messaging pattern example using UDP.
 > To do so, you can use the following command:
 >
 > ```bash
-> ip addr
+> # Get the list of network interfaces
+> ip address
 > ```
 >
-> Then, you can set the network interface in the code.
+> Then, you can set the network interface to the one you want to use in the
+> code.
