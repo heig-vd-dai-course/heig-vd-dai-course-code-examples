@@ -65,7 +65,7 @@ class TcpReplServerExample {
               case HELLO -> {
                 if (clientRequestParts.length < 2) {
                   System.out.println(
-                      "[Server] HELLO command received without <name> parameter. Replying with "
+                      "[Server] " + command + " command received without <name> parameter. Replying with "
                           + ServerCommand.INVALID
                           + ".");
                   response = ServerCommand.INVALID + " Missing <name> parameter. Please try again.";
@@ -84,7 +84,7 @@ class TcpReplServerExample {
                     "[Server] Unknown command sent by client, reply with "
                         + ServerCommand.INVALID
                         + ".");
-                out.write(ServerCommand.INVALID.name());
+                response = ServerCommand.INVALID + " Unknown command. Please try again.";
               }
             }
 

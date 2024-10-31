@@ -32,8 +32,6 @@ class TcpReplClientExample {
         BufferedWriter out = new BufferedWriter(writer)) {
       System.out.println("[Client] Connected to " + HOST + ":" + PORT);
       System.out.println();
-      System.out.println("You are connected to server " + HOST + " on port " + PORT + ".");
-      System.out.println();
 
       // Display help message
       help();
@@ -41,7 +39,7 @@ class TcpReplClientExample {
       // Run REPL until user quits
       while (!socket.isClosed()) {
         // Display prompt
-        System.out.print(" > ");
+        System.out.print("> ");
 
         // Read user input
         Reader inputReader = new InputStreamReader(System.in, StandardCharsets.UTF_8);
