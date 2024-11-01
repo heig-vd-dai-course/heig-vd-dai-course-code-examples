@@ -22,7 +22,7 @@ public class UnicastClientExample {
   private static final String MESSAGE = "Hello, I'm the client! 🦇";
 
   public static void main(String[] args) {
-    System.out.println("[C] Sending request...");
+    System.out.println("[Client] Sending request...");
 
     try (DatagramSocket socket = new DatagramSocket()) {
       // Get the server address
