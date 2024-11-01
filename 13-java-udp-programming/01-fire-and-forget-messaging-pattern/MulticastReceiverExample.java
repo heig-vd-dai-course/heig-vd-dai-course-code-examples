@@ -35,7 +35,14 @@ public class MulticastReceiverExample {
       socket.joinGroup(multicastGroup, networkInterface);
 
       System.out.println(
-          "[RECEIVER] Listening for multicast messages on interface " + NETWORK_INTERFACE + "...");
+          "[Receiver] Listening for multicast messages on address "
+              + MULTICAST_ADDRESS
+              + ", "
+              + "network interface "
+              + NETWORK_INTERFACE
+              + " and port "
+              + PORT
+              + "...");
 
       while (!socket.isClosed()) {
         // Create a buffer for the incoming message
@@ -48,12 +55,12 @@ public class MulticastReceiverExample {
         socket.receive(packet);
 
         // Transform the message into a string
-        String message =
+        String emitterMessage =
             new String(
                 packet.getData(), packet.getOffset(), packet.getLength(), StandardCharsets.UTF_8);
 
         // Print the message
-        System.out.println("[RECEIVER] Message received: " + message);
+        System.out.println("[Receiver] Received message: " + emitterMessage);
       }
 
       // Quit the multicast group
