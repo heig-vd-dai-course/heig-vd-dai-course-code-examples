@@ -29,7 +29,7 @@ public class MulticastEmitterExample {
   private static final int FREQUENCY = 5000;
 
   public static void main(String[] args) {
-    System.out.println("[EMITTER] Sending multicast messages...");
+    System.out.println("[Emitter] Sending multicast messages...");
 
     while (true) {
       String messageWithDate = MESSAGE + " (sent on " + new Date() + ")";
@@ -49,12 +49,12 @@ public class MulticastEmitterExample {
         socket.send(packet);
 
         // Print the message
-        System.out.println("[EMITTER] Message sent: " + messageWithDate);
+        System.out.println("[Emitter] Message sent: " + messageWithDate);
 
         // Wait for the next message
         Thread.sleep(FREQUENCY);
       } catch (Exception e) {
-        System.err.println("[EMITTER] An error occurred: " + e.getMessage());
+        System.err.println("[Emitter] An error occurred: " + e.getMessage());
       }
     }
   }

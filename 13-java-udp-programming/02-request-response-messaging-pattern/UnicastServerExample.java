@@ -16,7 +16,7 @@ public class UnicastServerExample {
 
   public static void main(String[] args) {
     try (DatagramSocket socket = new DatagramSocket(PORT)) {
-      System.out.println("[SERVER] Server is listening on port " + PORT + "...");
+      System.out.println("[Server] Listening for unicast messages on port " + PORT + "...");
 
       while (!socket.isClosed()) {
         // Create a buffer for the incoming request
@@ -36,7 +36,7 @@ public class UnicastServerExample {
                 requestPacket.getLength(),
                 StandardCharsets.UTF_8);
 
-        System.out.println("[SERVER] Received request (at " + new Date() + "): " + request);
+        System.out.println("[Server] Request received (at " + new Date() + "): " + request);
 
         // Prepare the response
         String response = "Hello, client! I'm the server. 👻";
@@ -55,10 +55,10 @@ public class UnicastServerExample {
         // Send the packet
         socket.send(responsePacket);
 
-        System.out.println("[SERVER] Response sent (at " + new Date() + "): " + response);
+        System.out.println("[Server] Response sent (at " + new Date() + "): " + response);
       }
     } catch (Exception e) {
-      System.err.println("[SERVER] An error occurred: " + e.getMessage());
+      System.err.println("[Server] An error occurred: " + e.getMessage());
     }
   }
 }

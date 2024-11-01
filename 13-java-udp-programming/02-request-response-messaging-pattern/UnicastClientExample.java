@@ -22,7 +22,7 @@ public class UnicastClientExample {
   private static final String MESSAGE = "Hello, I'm the client! 🦇";
 
   public static void main(String[] args) {
-    System.out.println("[CLIENT] Sending request...");
+    System.out.println("[Client] Sending request...");
 
     try (DatagramSocket socket = new DatagramSocket()) {
       // Get the server address
@@ -37,7 +37,7 @@ public class UnicastClientExample {
       // Send the packet
       socket.send(packet);
 
-      System.out.println("[CLIENT] Request sent: " + MESSAGE);
+      System.out.println("[Client] Request sent: " + MESSAGE);
 
       // Create a buffer for the incoming response
       byte[] responseBuffer = new byte[1024];
@@ -56,11 +56,11 @@ public class UnicastClientExample {
               responsePacket.getLength(),
               StandardCharsets.UTF_8);
 
-      System.out.println("[CLIENT] Received response: " + response);
+      System.out.println("[Client] Received response: " + response);
     } catch (Exception e) {
-      System.err.println("[CLIENT] An error occurred: " + e.getMessage());
+      System.err.println("[Client] An error occurred: " + e.getMessage());
     }
 
-    System.out.println("[CLIENT] Quitting...");
+    System.out.println("[Client] Quitting...");
   }
 }
