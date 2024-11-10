@@ -20,7 +20,7 @@ Here is **one of the possible results**.
 
 ## Section 1 - Overview
 
-The SMS (Short Message Service) protocol is a communication protocol that allows
+The Short Message Service (SMS) protocol is a communication protocol that allows
 the sending of text messages (generally short) between users.
 
 ## Section 2 - Transport protocol
