@@ -13,7 +13,7 @@ server before the client for example).
 
 They are ordered by complexity. You should explore them in the following order:
 
-- [`TcpClientExample.java`](./TcpClientExample.java).
+- [`TcpClientExample.java`](./TcpClientExample.java)
 - [`TcpServerSimpleExample`](./TcpServerSimpleExample.java)
 - [`TcpServerSingleThreadExample`](./TcpServerSingleThreadExample.java)
 - [`TcpServerMultiThreadExample`](./TcpServerMultiThreadExample.java)

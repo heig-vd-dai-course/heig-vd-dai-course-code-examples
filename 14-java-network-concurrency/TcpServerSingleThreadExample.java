@@ -22,10 +22,6 @@ public class TcpServerSingleThreadExample {
       }
     } catch (IOException e) {
       System.out.println("[Server " + SERVER_ID + "] exception: " + e);
-    } finally {
-      if (executor != null) {
-        executor.shutdown();
-      }
     }
   }
 
