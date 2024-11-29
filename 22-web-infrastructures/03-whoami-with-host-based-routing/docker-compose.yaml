@@ -4,7 +4,7 @@ networks:
     external: true
 
 services:
-  whoami:
+  whoami-with-host-based-routing:
     image: traefik/whoami:${WHOAMI_IMAGE_VERSION:-latest}
     networks:
       - traefik_network
@@ -18,5 +18,5 @@ services:
       - traefik.enable=true
       - traefik.docker.network=traefik_network
       ## HTTPS
-      - traefik.http.routers.whoami.entrypoints=https
-      - traefik.http.routers.whoami.rule=Host(`${WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME}`)
+      - traefik.http.routers.whoami-with-host-based-routing.entrypoints=https
+      - traefik.http.routers.whoami-with-host-based-routing.rule=Host(`${WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME}`)
