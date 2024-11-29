@@ -1,4 +1,4 @@
-# The SMS protocol
+# The Short Message Service (SMS) protocol
 
 You are working for a startup that wants to create a new communication app.
 
@@ -41,7 +41,7 @@ and must also use port 1234.
 
 > [!NOTE]
 >
-> The port should be one of the unused ports bigger than 1024.
+> The port should be one of the unused ports bigger than 1023.
 >
 > However, no matter which port you choose to use, you **must** define one for
 > your application protocol(s) so other people know which one to use to

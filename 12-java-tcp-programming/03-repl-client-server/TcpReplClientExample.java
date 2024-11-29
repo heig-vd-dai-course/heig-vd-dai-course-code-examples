@@ -29,7 +29,9 @@ class TcpReplClientExample {
         Reader reader = new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8);
         BufferedReader in = new BufferedReader(reader);
         Writer writer = new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8);
-        BufferedWriter out = new BufferedWriter(writer)) {
+        BufferedWriter out = new BufferedWriter(writer);
+        Reader systemInReader = new InputStreamReader(System.in, StandardCharsets.UTF_8);
+        BufferedReader bsir = new BufferedReader(systemInReader)) {
       System.out.println("[Client] Connected to " + HOST + ":" + PORT);
       System.out.println();
 
@@ -42,9 +44,7 @@ class TcpReplClientExample {
         System.out.print("> ");
 
         // Read user input
-        Reader inputReader = new InputStreamReader(System.in, StandardCharsets.UTF_8);
-        BufferedReader bir = new BufferedReader(inputReader);
-        String userInput = bir.readLine();
+        String userInput = bsir.readLine();
 
         try {
           // Split user input to parse command (also known as message)
