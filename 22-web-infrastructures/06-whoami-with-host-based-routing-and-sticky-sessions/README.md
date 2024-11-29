@@ -27,8 +27,7 @@ service and 3 replicas of the `whoami-with-sticky-sessions` service:
 
 ```sh
 # Start the containers
-docker compose up --scale whoami-without-sticky-sessions=3 --scale whoami
--with-sticky-sessions=3
+docker compose up --scale whoami-without-sticky-sessions=3 --scale whoami-with-sticky-sessions=3 -d
 ```
 
 Open your browser and go to <https://WHOAMI_1_FULLY_QUALIFIED_DOMAIN_NAME> to

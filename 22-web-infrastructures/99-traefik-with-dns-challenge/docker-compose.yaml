@@ -59,7 +59,8 @@ services:
       ## Middlewares
       # This enables the basic-auth middleware using the Docker secret
       - traefik.http.middlewares.basic-auth.basicauth.usersFile=/run/secrets/auth_users
-      ## HTTPS
+      ## Routers
       - traefik.http.routers.traefik.entrypoints=https
       - traefik.http.routers.traefik.rule=Host(`${TRAEFIK_FULLY_QUALIFIED_DOMAIN_NAME}`)
       - traefik.http.routers.traefik.service=api@internal
+      - traefik.http.routers.traefik.middlewares=basic-auth

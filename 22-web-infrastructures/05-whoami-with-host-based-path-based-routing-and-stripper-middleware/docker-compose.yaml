@@ -13,7 +13,7 @@ services:
       ## Traefik
       - traefik.enable=true
       - traefik.docker.network=traefik_network
-      ## HTTPS
+      ## Routers
       - traefik.http.routers.whoami-without-stripprefix.entrypoints=https
       - traefik.http.routers.whoami-without-stripprefix.rule=Host(`${WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME}`)
         && PathPrefix(`/whoami-without-stripprefix`)
@@ -31,7 +31,7 @@ services:
       ## Middlewares
       # We add a middleware to strip the prefix `/whoami-with-stripprefix` from the request
       - traefik.http.middlewares.whoami-stripprefix.stripprefix.prefixes=/whoami-with-stripprefix
-      ## HTTPS
+      ## Routers
       - traefik.http.routers.whoami-with-stripprefix.entrypoints=https
       - traefik.http.routers.whoami-with-stripprefix.rule=Host(`${WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME}`)
         && PathPrefix(`/whoami-with-stripprefix`)

@@ -25,16 +25,6 @@ example. It adds the following features:
 
 ## Prerequisites
 
-### Rename or remove the `letsencrypt` folder
-
-As you will be using the DNS challenge with a new configuration, you must rename
-or remove the `letsencrypt` folder from the previous example.
-
-```sh
-# Rename the folder
-mv letsencrypt letsencrypt.old
-```
-
 ### Have a domain name ready and a DNS provider that supports the ACME DNS challenge
 
 You must have a domain name ready.

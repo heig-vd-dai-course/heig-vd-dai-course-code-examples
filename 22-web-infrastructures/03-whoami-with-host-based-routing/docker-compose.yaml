@@ -17,6 +17,9 @@ services:
       ## Traefik
       - traefik.enable=true
       - traefik.docker.network=traefik_network
-      ## HTTPS
+      ## Routers
+      # ATTENTION: each container must have different routers' names.
+      # In this case, the routers' names for this service is `whoami-with-host-based-routing`.
+      # Other services must have different routers' names.
       - traefik.http.routers.whoami-with-host-based-routing.entrypoints=https
       - traefik.http.routers.whoami-with-host-based-routing.rule=Host(`${WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME}`)

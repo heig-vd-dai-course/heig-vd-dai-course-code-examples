@@ -59,7 +59,7 @@ services:
       - traefik.enable=true
       # Help Traefik find this container on the network
       - traefik.docker.network=traefik_network
-      ## HTTPS
+      ## Routers
       # The entrypoint of this container is HTTPS
       - traefik.http.routers.traefik.entrypoints=https
       # This container is accessible with the fully qualified domain name
