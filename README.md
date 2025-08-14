@@ -9,7 +9,7 @@ If you have followed the HEIG-VD DAI teaching unit before the fall semester
 respective Git tags here:
 <https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/tags>.
 
-We invite you the check the main repository
+We invite you to check the main repository
 [`heig-vd-dai-course/heig-vd-dai-course`](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
 for more updated content.
 
