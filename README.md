@@ -1,8 +1,16 @@
 # HEIG-VD DAI Course - Code examples
 
-This repository contains the code examples related to the
-[main repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course).
+Since the fall semester 2025-2026, this repository has been merged with the main
+repository
+[`heig-vd-dai-course/heig-vd-dai-course`](https://github.com/heig-vd-dai-course/heig-vd-dai-course).
 
-Each directory contains examples related to its specific chapter in the course.
+If you have followed the HEIG-VD DAI teaching unit before the fall semester
+2025-2026, you can still find the code examples for your years in their
+respective Git tags here:
+<https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions/tags>.
 
-Check the `README.md` file in each directory for more information.
+We invite you the check the main repository
+[`heig-vd-dai-course/heig-vd-dai-course`](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
+for more updated content.
+
+Take care!
