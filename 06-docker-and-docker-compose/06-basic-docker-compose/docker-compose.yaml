@@ -1,8 +1,0 @@
-services:
-  hello-world:
-    image: alpine:3.20
-    command: echo "Hello, World!"
-
-  hello-dai-student:
-    image: alpine:3.20
-    command: echo "Hello, DAI student!"
